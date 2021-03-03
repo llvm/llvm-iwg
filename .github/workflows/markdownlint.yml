@@ -1,0 +1,27 @@
+name: markdown lint
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+
+    # installing more packages as proposed in 
+    # https://askubuntu.com/questions/1088662/npm-depends-node-gyp-0-10-9-but-it-is-not-going-to-be-installed
+    - name: install markdownlint-cli
+      run: |
+        sudo apt-get update       
+        sudo apt-get install -y npm sudo nodejs-dev node-gyp libssl1.0-dev
+        npm install markdownlint-cli
+
+    - name: lint markdown files
+      # conly scan the /content folder
+      run: node_modules/.bin/markdownlint content
