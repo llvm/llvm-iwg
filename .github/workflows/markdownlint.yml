@@ -10,6 +10,7 @@ on:
 
 jobs:
   build:
+    # set specific OS version
     runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v1
@@ -23,5 +24,4 @@ jobs:
         npm install markdownlint-cli
 
     - name: lint markdown files
-      # conly scan the /content folder
-      run: node_modules/.bin/markdownlint content
+      run: node_modules/.bin/markdownlint .
