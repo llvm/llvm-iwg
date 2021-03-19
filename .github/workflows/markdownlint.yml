@@ -24,4 +24,6 @@ jobs:
         npm install markdownlint-cli
 
     - name: lint markdown files
-      run: node_modules/.bin/markdownlint .
+      # scan all files, exclude the "node_modules" as this contains the tool
+      # itself
+      run: node_modules/.bin/markdownlint --ignore node_modules .
