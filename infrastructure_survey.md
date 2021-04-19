@@ -204,8 +204,8 @@ technologies.
 ### LIT
 
 - home-grown testing framework [LIT](https://llvm.org/docs/CommandGuide/lit.html)
-- included in the 
-   [LLVM monorepo](https://github.com/llvm-mirror/llvm/tree/master/utils/lit)
+- included in the
+  [LLVM monorepo](https://github.com/llvm-mirror/llvm/tree/master/utils/lit)
 
 ## Web sites
 
@@ -235,43 +235,61 @@ Binaries/releases are distributed by [Fastly](https://www.fastly.com/).
 
 ## practical formal reasoning
 
-(Alive2)[https://github.com/AliveToolkit/alive2] is an external effort to build tooling around formal semenatics for LLVM IR.  It is being used extensively validate InstCombine transforms before submission, and (less extensively) to isolate which transform is miscompiling.  It's also being used to drive efforts to improve the specification of poison and undef in the LangRef.
+[Alive2](https://github.com/AliveToolkit/alive2) is an external effort to build
+tooling around formal semenatics for LLVM IR.  It is being used extensively
+validate InstCombine transforms before submission, and (less extensively) to
+isolate which transform is miscompiling.  It's also being used to drive efforts
+to improve the specification of poison and undef in the LangRef.
 
 ## external testing and revert to green
 
-As a project, we rely heavily on external testing of ToT to ensure quality via bisection and revert-to-greeen.  A few of particular note:
+As a project, we rely heavily on external testing of ToT to ensure quality via
+bisection and revert-to-greeen. A few of particular note:
 
-- Google's weekly build with new ToT compiler finds a lot.  The hashes of previously builds are available (where?) and are consumed by others as a defacto "recent stable" series.
+- Google's weekly build with new ToT compiler finds a lot.  The hashes of
+  previously builds are available (where?) and are consumed by others as a
+  defacto "recent stable" series.
 - See Green Dragon above.
-- https://llvm-compile-time-tracker.com - ongoing effort to track and actively revert changes which impact compile time negatively.  Contact: Nikita Popov?
-- Nuno Lopes and his team maintains a [dashboard][https://web.ist.utl.pt/nuno.lopes/alive2/] of currently failing LLVM tests related to the ongoing efforts to formalize poison/undef.
+- https://llvm-compile-time-tracker.com - ongoing effort to track and actively
+  revert changes which impact compile time negatively.  Contact: Nikita Popov?
+- Nuno Lopes and his team maintains a [dashboard][https://web.ist.utl.pt/nuno.lopes/alive2/]
+  of currently failing LLVM tests related to the ongoing efforts to formalize poison/undef.
 - Fuzzing efforts
 
   - Google's OSS Fuzz
-  - Azul runs a [java fuzzer][https://github.com/AzulSystems/JavaFuzzer] which finds a lot of miscompiles.
-  - [clang-triage][https://github.com/sliedes/clang-triage] - externally developed, doesn't appear to still be active
+  - Azul runs a [java fuzzer][https://github.com/AzulSystems/JavaFuzzer] which
+    finds a lot of miscompiles.
+  - [clang-triage][https://github.com/sliedes/clang-triage] - externally
+    developed, doesn't appear to still be active
   - to be continued...
   
-Running these efforts are probably mostly out of scope for the working group, but supporting them w/ e.g. bisection and reduction tooling is not.  We should probably also establish point of contacts for each if they're going to be reverting lots of changes upstream.
+Running these efforts are probably mostly out of scope for the working group,
+but supporting them w/ e.g. bisection and reduction tooling is not.  We should
+probably also establish point of contacts for each if they're going to be
+reverting lots of changes upstream.
 
 ## code analysis reports
 
-* https://llvm.org/reports/scan-build/
-* https://llvm.org/reports/coverage/ (out of date)
-* https://scan.coverity.com/projects/llvm (*very* out of date)
+- https://llvm.org/reports/scan-build/
+- https://llvm.org/reports/coverage/ (out of date)
+- https://scan.coverity.com/projects/llvm (*very* out of date)
 
 It's unclear who owns these, or how they're generated.
 
 ## packages and distribution
 
-Various distributions package LLVM, we may want to document tooling and assumptions around that.
+Various distributions package LLVM, we may want to document tooling and
+assumptions around that.
 
-https://apt.llvm.org/ provides "nightly" LLVM packages.  Unclear how widely this is used.  It does appear to be actively maintained.  See section on technical details towards end of page. 
+https://apt.llvm.org/ provides "nightly" LLVM packages.  Unclear how widely this
+is used.  It does appear to be actively maintained.  See section on technical
+details towards end of page.
 
-* Contact: Sylvestre Ledru
-* Last time @ChristianKuehnel talked to the Sylvestre, there were no usage metrics available.
+- Contact: Sylvestre Ledru
+- Last time @ChristianKuehnel talked to the Sylvestre, there were no usage metrics available.
 
-# Google Workspace
+## Google Workspace
 
-[Google Workspace](https://workspace.google.com/) is in the LLVM foundation to manage mailing lists
-(e.g. iwg@llvm.org) and to collaborate on documents. This is not used in the LLVM community.
+[Google Workspace](https://workspace.google.com/) is in the LLVM foundation to
+manage mailing lists (e.g. iwg@llvm.org) and to collaborate on documents.
+This is not used in the LLVM community.
