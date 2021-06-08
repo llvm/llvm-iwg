@@ -122,20 +122,31 @@ See https://llvm.discourse.group/about
 
 ### What is the reason for the migration?
 
-see https://lists.llvm.org/pipermail/llvm-dev/2021-June/150823.html
+see [this email](https://lists.llvm.org/pipermail/llvm-dev/2021-June/150823.html)
 
 ### How do I set up a private mailing list?
 
 If needed categories can have individual [security
 settings](https://meta.discourse.org/t/how-to-use-category-security-settings-to-create-private-categories/87678)
 to limit visibility and write permissions. Contact the
-[admins(https://llvm.discourse.group/about) if you need such a category.
+[admins](https://llvm.discourse.group/about) if you need such a category.
 
 ### What will happen to our email archives?
 
 **TODO:** Explain the migration.
 
+**TODO:** Can we preserve the links to the email archive?
+see [#46](https://github.com/llvm/llvm-iwg/issues/46)
+
+### How Do I cross-post (send in multiple categories) a message?
+
+Topics are assigned to exactly one category, assigning to multiple categories
+[is not supported](https://meta.discourse.org/t/selecting-multiple-category/116827).
+
+**TODO:** The documentation says tags can be used to achieve a similar outcome.
+However they don't say how to do that.
+
 ### I have another question not covered here. What should I do?
 
 Please contact iwg@llvm.org or raise a
-[ticket](https://github.com/llvm/llvm-iwg/issues).
+[ticket on GitHub](https://github.com/llvm/llvm-iwg/issues).
