@@ -1,4 +1,4 @@
-# User guide for the migration of the mailing lists
+# [draft] User guide for the migration of the mailing lists
 
 This document is intended to help LLVM users to migrate from the mailing lists to
 Discourse. Discourse two basic ways for interaction: Via the [web
