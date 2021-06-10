@@ -53,7 +53,7 @@ migration.
 | Bugs-admin            | no migration at the moment |
 | cfe-commits           | no migration at the moment |
 | cfe-dev               | llvm-project/clang |
-| cfe-users             | **TODO** llvm-project/clang or <br/> create new category? |
+| cfe-users             | **TODO** llvm-project/clang or create new category? |
 | clangd-dev            | llvm-project/clangd |
 | devmtg-organizers     | **TODO** create new category |
 | Docs                  | infrastructure/documentation |
@@ -81,7 +81,7 @@ migration.
 | Openmp-commits        | no migration at the moment |
 | Openmp-dev            | llvm-project/openmp |
 | Parallel_libs-commits | no migration at the moment |
-| Parallel_libs-dev     | **TODO** use llvm-project/pstl <br> or create new category ? |
+| Parallel_libs-dev     | **TODO** use llvm-project/pstl or create new category ? |
 | Release-testers       | **TODO** create new category |
 | Test-list             | **TODO** create new category |
 | vmkit-commits         | no migration at the moment |
