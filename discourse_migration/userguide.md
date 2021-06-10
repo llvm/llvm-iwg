@@ -85,7 +85,7 @@ migration.
 | Release-testers       | **TODO** create new category |
 | Test-list             | **TODO** create new category |
 | vmkit-commits         | no migration at the moment |
-| WiCT                  | **TODO** |
+| WiCT                  | community/women-in-compilers-and-tools/ |
 | www-scripts           | **TODO** |
 
 **TODO:** add discourse links once the list is finalized
