@@ -52,39 +52,39 @@ migration.
 | All-commits           | no migration at the moment |
 | Bugs-admin            | no migration at the moment |
 | cfe-commits           | no migration at the moment |
-| cfe-dev               | **TODO** |
-| cfe-users             | **TODO** |
-| clangd-dev            | lvm-project/clang |
-| devmtg-organizers     | community/devmtg |
+| cfe-dev               | llvm-project/clang |
+| cfe-users             | **TODO** llvm-project/clang or <br/> create new category? |
+| clangd-dev            | llvm-project/clangd |
+| devmtg-organizers     | **TODO** create new category |
 | Docs                  | infrastructure/documentation |
-| eurollvm-organizers   | community/eurollvm |
+| eurollvm-organizers   | **TODO** create new category |
 | flang-commits         | no migration at the moment |
-| flang-dev             | lvm-project/flang |
+| flang-dev             | llvm-project/flang |
 | gsoc                  | community/gsoc |
 | libc-commits          | no migration at the moment |
-| libc-dev              | lvm-project/libc |
-| Libclc-dev            | **TODO** |
+| libc-dev              | llvm-project/libc |
+| Libclc-dev            | **TODO** create new category |
 | libcxx-bugs           | no migration at the moment |
 | libcxx-commits        | no migration at the moment |
-| libcxx-dev            | lvm-project/libcxx |
+| libcxx-dev            | llvm-project/libcxx |
 | lldb-commits          | no migration at the moment |
-| lldb-dev              | lvm-project/lldb |
-| llvm-admin            | **TODO** |
-| llvm-announce         | **TODO** |
+| lldb-dev              | llvm-project/lldb |
+| llvm-admin            | **TODO** create new category |
+| llvm-announce         | **TODO** create new category |
 | llvm-branch-commits   | no migration at the moment |
 | llvm-bugs             | no migration at the moment |
 | llvm-commits          | no migration at the moment |
-| llvm-dev              | lvm-project/llvm |
+| llvm-dev              | llvm-project/llvm |
 | llvm-devmeeting       | community/devmtg |
-| llvm-foundation       | **TODO** |
+| llvm-foundation       | **TODO**  create new category|
 | Mlir-commits          | no migration at the moment |
 | Openmp-commits        | no migration at the moment |
-| Openmp-dev            | lvm-project/openmp |
+| Openmp-dev            | llvm-project/openmp |
 | Parallel_libs-commits | no migration at the moment |
-| Parallel_libs-dev     | **TODO** |
-| Release-testers       | **TODO** |
-| Test-list             | **TODO** |
-| vmkit-commits         | **TODO** |
+| Parallel_libs-dev     | **TODO** use llvm-project/pstl <br> or create new category ? |
+| Release-testers       | **TODO** create new category |
+| Test-list             | **TODO** create new category |
+| vmkit-commits         | no migration at the moment |
 | WiCT                  | **TODO** |
 | www-scripts           | **TODO** |
 
@@ -122,7 +122,10 @@ See https://llvm.discourse.group/about
 
 ### What is the reason for the migration?
 
-see [this email](https://lists.llvm.org/pipermail/llvm-dev/2021-June/150823.html)
+**TODO:** add more explanation here
+
+See also
+[this email](https://lists.llvm.org/pipermail/llvm-dev/2021-June/150823.html)
 
 ### How do I set up a private mailing list?
 
