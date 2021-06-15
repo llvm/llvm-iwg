@@ -1,4 +1,4 @@
-# [draft] User guide for the migration of the mailing lists
+# [draft] User guide for the (potential) migration of the mailing lists
 
 This document is intended to help LLVM users to migrate from the mailing lists to
 Discourse. Discourse two basic ways for interaction: Via the [web
@@ -148,6 +148,16 @@ Topics are assigned to exactly one category, assigning to multiple categories
 
 **TODO:** The documentation says tags can be used to achieve a similar outcome.
 However they don't say how to do that.
+
+### What are advantages of Discours over the current mailing lists?
+
+* Users can post to any category, also without being subscribed.
+* Full text search on the Web UI.
+* Sending/replying via the Web UI (email is still possible).
+* View entire thred on one page.
+* Categories are a more light-weight option to structure the discussions than creating new mailing lists.
+* Single sign on with GitHub.
+* User email addresses are kept private.
 
 ### I have another question not covered here. What should I do?
 
