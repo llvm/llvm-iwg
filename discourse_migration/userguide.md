@@ -45,6 +45,7 @@ are the typical use cases:
 
 This table explains the mapping from mailing lists to categories in Discourse.
 The email addresses of these categories will remain the same, after the
+migration.  Obsolete lists will become read-only as part of the Discourse
 migration.
 
 | Mailing lists         | category in Discourse |
@@ -52,41 +53,41 @@ migration.
 | All-commits           | no migration at the moment |
 | Bugs-admin            | no migration at the moment |
 | cfe-commits           | no migration at the moment |
-| cfe-dev               | llvm-project/clang |
-| cfe-users             | **TODO** llvm-project/clang or create new category? |
-| clangd-dev            | llvm-project/clangd |
-| devmtg-organizers     | **TODO** create new category |
-| Docs                  | infrastructure/documentation |
-| eurollvm-organizers   | **TODO** create new category |
+| cfe-dev               | Clang Frontend |
+| cfe-users             | Clang Frontend/Using Clang |
+| clangd-dev            | Clang Frontend/clangd |
+| devmtg-organizers     | Obsolete |
+| Docs                  | Project Infrastructure/Documentation |
+| eurollvm-organizers   | Obsolete |
 | flang-commits         | no migration at the moment |
-| flang-dev             | llvm-project/flang |
-| gsoc                  | community/gsoc |
+| flang-dev             | Subprojects/Flang |
+| gsoc                  | Community/Google Summer of Code |
 | libc-commits          | no migration at the moment |
-| libc-dev              | llvm-project/libc |
-| Libclc-dev            | **TODO** create new category |
+| libc-dev              | Runtimes/C |
+| Libclc-dev            | Runtimes/OpenCL |
 | libcxx-bugs           | no migration at the moment |
 | libcxx-commits        | no migration at the moment |
-| libcxx-dev            | llvm-project/libcxx |
+| libcxx-dev            | Runtimes/C++ |
 | lldb-commits          | no migration at the moment |
-| lldb-dev              | llvm-project/lldb |
-| llvm-admin            | **TODO** create new category |
-| llvm-announce         | **TODO** create new category |
+| lldb-dev              | Subprojects/lldb |
+| llvm-admin            | no migration at the moment |
+| llvm-announce         | Announce |
 | llvm-branch-commits   | no migration at the moment |
 | llvm-bugs             | no migration at the moment |
 | llvm-commits          | no migration at the moment |
-| llvm-dev              | llvm-project/llvm |
-| llvm-devmeeting       | community/devmtg |
-| llvm-foundation       | **TODO**  create new category|
+| llvm-dev              | Project Infrastructure/LLVM Dev List Archives |
+| llvm-devmeeting       | Community/US Developer Meeting |
+| llvm-foundation       | Community/Foundation |
 | Mlir-commits          | no migration at the moment |
 | Openmp-commits        | no migration at the moment |
-| Openmp-dev            | llvm-project/openmp |
+| Openmp-dev            | Runtimes/OpenMP |
 | Parallel_libs-commits | no migration at the moment |
-| Parallel_libs-dev     | **TODO** use llvm-project/pstl or create new category ? |
-| Release-testers       | **TODO** create new category |
-| Test-list             | **TODO** create new category |
-| vmkit-commits         | no migration at the moment |
-| WiCT                  | community/women-in-compilers-and-tools/ |
-| www-scripts           | **TODO** |
+| Parallel_libs-dev     | Runtimes/C++ |
+| Release-testers       | Project Infrastructure/Release Testers |
+| Test-list             | Obsolete |
+| vmkit-commits         | Obsolete |
+| WiCT                  | Community/Women in Compilers and Tools |
+| www-scripts           | Obsolete |
 
 **TODO:** add discourse links once the list is finalized
 
