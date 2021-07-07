@@ -45,6 +45,7 @@ are the typical use cases:
 
 This table explains the mapping from mailing lists to categories in Discourse.
 The email addresses of these categories will remain the same, after the
+migration.  Deprecated lists will become read-only as part of the Discourse
 migration.
 
 | Mailing lists         | category in Discourse |
@@ -53,40 +54,40 @@ migration.
 | Bugs-admin            | no migration at the moment |
 | cfe-commits           | no migration at the moment |
 | cfe-dev               | llvm-project/clang |
-| cfe-users             | **TODO** llvm-project/clang or create new category? |
+| cfe-users             | llvm-project/clang |
 | clangd-dev            | llvm-project/clangd |
-| devmtg-organizers     | **TODO** create new category |
+| devmtg-organizers     | Deprecated |
 | Docs                  | infrastructure/documentation |
-| eurollvm-organizers   | **TODO** create new category |
+| eurollvm-organizers   | Deprecated |
 | flang-commits         | no migration at the moment |
 | flang-dev             | llvm-project/flang |
 | gsoc                  | community/gsoc |
 | libc-commits          | no migration at the moment |
 | libc-dev              | llvm-project/libc |
-| Libclc-dev            | **TODO** create new category |
+| Libclc-dev            | llvm-project/libclc |
 | libcxx-bugs           | no migration at the moment |
 | libcxx-commits        | no migration at the moment |
 | libcxx-dev            | llvm-project/libcxx |
 | lldb-commits          | no migration at the moment |
 | lldb-dev              | llvm-project/lldb |
-| llvm-admin            | **TODO** create new category |
-| llvm-announce         | **TODO** create new category |
+| llvm-admin            | Replace with bugzilla or Github Issues |
+| llvm-announce         | community/announce |
 | llvm-branch-commits   | no migration at the moment |
 | llvm-bugs             | no migration at the moment |
 | llvm-commits          | no migration at the moment |
 | llvm-dev              | llvm-project/llvm |
 | llvm-devmeeting       | community/devmtg |
-| llvm-foundation       | **TODO**  create new category|
+| llvm-foundation       | community/foundation |
 | Mlir-commits          | no migration at the moment |
 | Openmp-commits        | no migration at the moment |
 | Openmp-dev            | llvm-project/openmp |
 | Parallel_libs-commits | no migration at the moment |
-| Parallel_libs-dev     | **TODO** use llvm-project/pstl or create new category ? |
-| Release-testers       | **TODO** create new category |
-| Test-list             | **TODO** create new category |
-| vmkit-commits         | no migration at the moment |
+| Parallel_libs-dev     | llvm-project/pstl |
+| Release-testers       | llvm-project/release-testers |
+| Test-list             | Deprecated |
+| vmkit-commits         | Deprecated |
 | WiCT                  | community/women-in-compilers-and-tools/ |
-| www-scripts           | **TODO** |
+| www-scripts           | Deprecated |
 
 **TODO:** add discourse links once the list is finalized
 
