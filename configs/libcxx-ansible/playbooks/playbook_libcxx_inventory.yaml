@@ -1,0 +1,14 @@
+---
+- hosts: all
+  gather_facts: yes
+  roles:
+    - role: roles/hardware_facts
+  tasks:
+    - name: Facts
+      setup:
+    - name: "Simple Remote Inventory"
+      debug:
+        msg: "{{ansible_facts['nodename']}}: {{ ansible_local.macos.machine_model }} ({{ ansible_local.macos.hw_codename }}) {{ ansible_local.macos.sw_vers }}"
+    - name: Generate Ansible-cmdb Info
+      ansible.builtin.template: src=files/inventory dest="out/{{inventory_hostname}}"
+      delegate_to: localhost
