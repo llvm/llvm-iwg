@@ -1,0 +1,3 @@
+---
+ansible_user: administrator
+sudo_password: "{{ ansible_password }}"
