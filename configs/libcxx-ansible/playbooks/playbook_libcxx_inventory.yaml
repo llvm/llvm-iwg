@@ -1,0 +1,5 @@
+---
+- hosts: all
+  gather_facts: yes
+  roles:
+    - role: roles/hardware_facts

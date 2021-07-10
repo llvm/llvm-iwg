@@ -1,0 +1,12 @@
+---
+- hosts: all
+  gather_facts: yes
+  roles:
+    - role: roles/hardware_facts
+  tasks:
+    - include_tasks: "../tasks/add_users.yaml"
+      with_items:
+        - { username: medwards, uid: 501 }
+        - { username: ldionne, uid: 502 }
+      loop_control:
+        loop_var: user_dict

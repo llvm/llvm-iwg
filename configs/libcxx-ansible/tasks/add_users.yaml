@@ -1,0 +1,28 @@
+---
+- name: "Add the user '{{ user_dict.username }}' with a specific uid and a primary group of 'admin'"
+  become: yes
+  user:
+    name: "{{ user_dict.username }}"
+    comment: "{{ user_dict.username }} (LLVM Foundation)"
+    group: admin
+    shell: /bin/zsh
+    state: present
+    remove: no
+    password: "{{ vault_default_user_password }}"
+    update_password: on_create
+- name: "Create /Users/{{ user_dict.username }}/.ssh dir"
+  become: yes
+  ansible.builtin.file:
+    path: "/Users/{{ user_dict.username }}/.ssh"
+    state: directory
+    owner: "{{ user_dict.username }}"
+    group: staff
+    mode: '0700'
+- name: "Setup {{ user_dict.username }} public key"
+  become: yes
+  ansible.builtin.copy:
+    src: "../files/{{ user_dict.username }}_llvm.key.pub"
+    dest: "/Users/{{ user_dict.username }}/.ssh/authorized_keys"
+    owner: "{{ user_dict.username }}"
+    group: staff
+    mode: '0644'

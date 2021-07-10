@@ -1,0 +1,14 @@
+---
+
+extends: default
+
+ignore: |
+  roles/test
+
+rules:
+  line-length: {max: 320, allow-non-breakable-words: true}
+  new-line-at-end-of-file:
+    level: warning
+  truthy:
+    allowed-values: ['true', 'false', 'yes', 'no']
+    check-keys: true
