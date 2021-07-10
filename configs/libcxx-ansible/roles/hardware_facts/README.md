@@ -45,7 +45,7 @@ Example Output
         serial_number: F5KLQ04CF694
 
 
-DRI
+Responsible Individual
 ------------------
 
-[Mike Edwards](<adir://employees/973604498>) - medwards@apple.com 
+Mike Edwards - medwards@llvm.org
