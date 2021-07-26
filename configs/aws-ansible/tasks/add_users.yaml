@@ -15,10 +15,10 @@
     password: "{{ vault_default_user_password | password_hash('sha512') }}"
     update_password: on_create
 
-- name: "Create /Users/{{ user_dict.username }}/.ssh dir"
+- name: "Create /home/{{ user_dict.username }}/.ssh dir"
   become: yes
   ansible.builtin.file:
-    path: "/Users/{{ user_dict.username }}/.ssh"
+    path: "/home/{{ user_dict.username }}/.ssh"
     state: directory
     owner: "{{ user_dict.username }}"
     group: wheel
@@ -28,7 +28,7 @@
   become: yes
   ansible.builtin.copy:
     src: "../files/{{ user_dict.username }}_llvm.key.pub"
-    dest: "/Users/{{ user_dict.username }}/.ssh/authorized_keys"
+    dest: "/home/{{ user_dict.username }}/.ssh/authorized_keys"
     owner: "{{ user_dict.username }}"
     group: wheel
     mode: '0644'
