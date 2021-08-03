@@ -19,7 +19,6 @@ Example Playbook
       roles:
         - role: roles/hardware_facts
 
-
 Example Output
 --------------
 
@@ -43,7 +42,6 @@ Example Output
         platform_cpu_htt: htt_enabled
         provisioning_UDID: 3C12ED30-F131-5579-A485-C32B0A027221
         serial_number: F5KLQ04CF694
-
 
 Responsible Individual
 ------------------
