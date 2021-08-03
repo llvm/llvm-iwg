@@ -89,7 +89,8 @@ migration.
 | WiCT                  | Community/Women in Compilers and Tools |
 | www-scripts           | Obsolete |
 
-**TODO:** add discourse links once the list is finalized
+For a full list of proposed categories see
+[discourse-categories.md](discourse-categories.md).
 
 ## FAQ
 
@@ -123,9 +124,7 @@ See https://llvm.discourse.group/about
 
 ### What is the reason for the migration?
 
-**TODO:** add more explanation here
-
-See also
+See
 [this email](https://lists.llvm.org/pipermail/llvm-dev/2021-June/150823.html)
 
 ### How do I set up a private mailing list?
@@ -150,15 +149,20 @@ Topics are assigned to exactly one category, assigning to multiple categories
 **TODO:** The documentation says tags can be used to achieve a similar outcome.
 However they don't say how to do that.
 
-### What are advantages of Discours over the current mailing lists?
+### What are advantages of Discourse over the current mailing lists?
 
 * Users can post to any category, also without being subscribed.
 * Full text search on the Web UI.
 * Sending/replying via the Web UI (email is still possible).
-* View entire thred on one page.
-* Categories are a more light-weight option to structure the discussions than creating new mailing lists.
+* View entire thread on one page.
+* Categories are a more light-weight option to structure the discussions than
+  creating new mailing lists.
 * Single sign on with GitHub.
 * User email addresses are kept private.
+
+### Why aren't we migrating to a hosted Mailman 3 instance instead?
+
+**TODO:** add rationale here
 
 ### I have another question not covered here. What should I do?
 
