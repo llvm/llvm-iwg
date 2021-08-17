@@ -16,9 +16,12 @@ Priorities of the working group, sorted from high to low:
      the status quo and the latest decisions.
 
 2. Driving improvements of services and workflows that keep causing issues
-   (crashes, bad performance, security, high maintenance effort, high cost, ...)
-   based on community feedback and service monitoring. This includes finding
-   community members or hiring contractors to implement these improvements.
+   (crashes, bad performance, security, high maintenance effort, high cost,
+   community complaints, ...) based on community feedback and service
+   monitoring. Increasing the health of our infrastructure will add to the
+   health of the community and will simplify contributions and enable growth.
+   This work includes finding community members or hiring contractors to
+   implement these improvements.
 
 3. Help the community come to decisions around mid and long-term improvements of
    development workflows and infrastructure, and help getting these decisions
