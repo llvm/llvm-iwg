@@ -1,0 +1,55 @@
+# working group meeting on 2021-08-31
+
+The agenda is in the [Kanban board](https://github.com/llvm/llvm-iwg/projects/1)
+
+## Participants
+* Christian Kühnel
+* Anja Gerbes
+* Wei Wu
+* Mishal Shah
+* Anton Korobeynikov
+* Tom Stellard
+
+## Document which sub-projects are using Phabricator and PullRequests #21
+
+* the first phabricator entry is ready 
+
+## Add Infrastructure Admin description #41
+
+* Foundation wants to hire a contractor (not an individual)
+* [proposal on a process for hirning a contractor](https://docs.google.com/document/d/1g9C4pEvTiq65vhKciydGvjXW3kBYuxaPGtt7D4Bz0E4/)
+  * meant to start the discussion on outsourcing
+  * we might want to convert this into markdown and store it in the repo
+
+## proposal on IWG priorities #52
+
+*  to be merged
+
+## Future of CI and Pull Requests
+
+* Wei Wu has experience with setting up runners and is willing to help
+* GitHub Pull Request disabled as they share the namespace with github issues
+  so the numbers would get used for PRs. However we want to reserve the numbers
+  for the migration of the bugzilla bugs and preserve their IDs.
+  * see also [our last meeting](https://github.com/llvm/llvm-iwg/blob/main/meeting_minutes/2021-08-17.md#update-on-bugzilla-migration)
+  * Timeline for bugzilla/issue migration: next few months
+* We need to differentiate two topics, to be discussed separately:
+  * What is actually technically needed for Pull Requests? (checking CLA, licences, issue IDs,...)
+  * What are users experience during the review process?
+* Open points: 
+  * How do we convince the community? Why do we thing this is the right tool?
+  * What is the biggest push-back from the community?
+    * Review interface is not as feature-rich as Phabricator.
+    * Reviewing stacked patches is more ugly.
+    * We can't influence GitHub's roadmap.
+    * The GitHub UI is fairly slow in China.
+  * Come to a decision within the community.
+  * Maybe run an RFC around code reiviews (with a structured timeline) 
+    and get community feedback. Make a decision after the review peroid.
+    * What would be a good time for that? Maybe wait until the 
+      bugzilla/issue migration is coming to an end?
+
+## Releasing compilers
+
+* Is anyone creating LLVM releases off the main branch? Please let @christianKuehnel know. 
+  We might want to join forces on building tools for that.
