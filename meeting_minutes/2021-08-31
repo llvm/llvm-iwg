@@ -44,7 +44,7 @@ The agenda is in the [Kanban board](https://github.com/llvm/llvm-iwg/projects/1)
     * We can't influence GitHub's roadmap.
     * The GitHub UI is fairly slow in China.
   * Come to a decision within the community.
-  * Maybe run an RFC around code reiviews (with a structured timeline) 
+  * Maybe run an RFC around code reviews (with a structured timeline) 
     and get community feedback. Make a decision after the review peroid.
     * What would be a good time for that? Maybe wait until the 
       bugzilla/issue migration is coming to an end?
