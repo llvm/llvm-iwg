@@ -1,0 +1,42 @@
+---
+# tasks file for hardware_facts
+- name: "Create custom fact directory"
+  file:
+    path: "/etc/ansible/facts.d"
+    state: "directory"
+  become: yes
+
+- name: "Insert hardware fact file"
+  become: yes
+  copy:
+    src: files/hardware.fact
+    dest: /etc/ansible/facts.d/hardware.fact
+    mode: 0755
+
+- name: "Insert storage fact file"
+  become: yes
+  copy:
+    src: files/storage.fact
+    dest: /etc/ansible/facts.d/storage.fact
+    mode: 0755
+  register: copy_status
+
+- name: "Re-run setup to use custom facts"
+  setup: ~
+  when: copy_status.changed
+
+- name: Print Node Hardware Facts
+  ansible.builtin.debug:
+    var: ansible_local.hardware.SPHardwareDataType[0]
+
+- name: Print Node Storage Facts
+  ansible.builtin.debug:
+    var: ansible_local.storage.SPStorageDataType[0]
+
+- name: Print Node Serial Number
+  ansible.builtin.debug:
+    msg: "The machine serial number is {{ ansible_local.hardware.SPHardwareDataType[0].serial_number }}"
+
+- name: Print Node Disk Type
+  ansible.builtin.debug:
+    msg: "The machine drive type is {{ ansible_local.storage.SPStorageDataType[0].physical_drive.device_name }}"
