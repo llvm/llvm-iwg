@@ -56,7 +56,8 @@ I propose to implement the following changes:
 
 ### tl;dr
 
-I propose to require all modified code to got through clang-tidy checks. However
+I propose to require all modified C/C++ code to got through clang-tidy checks.
+However
 the author and reviewers are free to ignore the findings as they find
 appropriate.
 
@@ -198,9 +199,41 @@ Thoughts on choosing the right tool:
 * We can see the current situation and the tools understand the results.
 * We can track progress in reducing the findings.
 
-### Risks
+### Benefits
 
 * Yet another tool to be configured and maintained.
 * The tool might show us that we’re not making any progress.
 * Having transparency might create (unwanted) pressure on contributors or
   sub-projects to decrease the number of findings.
+
+## RFC 5: Set up static analysis for Python code
+
+### tl;dr
+
+I propose to require all modified Python code to go through
+[Pylint](https://pylint.org/) checks. The Python code shall be formatted in line
+with [pep8](https://www.python.org/dev/peps/pep-0008/).
+
+### Problem statement
+
+We have ~2000 Python files in our code base, however Python is not covered in
+our [Coding Standard](https://llvm.org/docs/CodingStandards.html).
+
+### Proposed solution
+
+1. Add the required configuration files for [Pylint](https://pylint.org/)
+   (static analysis) and
+   [Black](https://black.readthedocs.io/en/stable/index.html) (code formatting)
+   to the Monorepo. Tailor the configuration files to LLVM's needs.
+1. Set up pre-merge checks for modifications to Python code.
+1. Set up `arc lint` to auto-format modified Python code and check for Pylint
+   findings.
+1. Set up post-merge checks on Buildbot for modifications to Python code.
+
+### Benefits
+
+* same as for C/C++ (see RFC 2 above)
+
+### Risks
+
+* same as for C/C++ (see RFC 2 above)
