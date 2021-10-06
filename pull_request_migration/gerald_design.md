@@ -7,8 +7,8 @@ for [Phabricator](https://www.phacility.com/phabricator/).
 ## Vision
 
 Elaine is working on the MLIR sub-project in the LLVM monorepo. She is
-interested in all changes that affect her work. TO get notified on relevant
-changes, she configures a couple of rules in the `.gerald` file in the monorepo:
+interested in all changes that affect her work. To automatically assign labels
+to Pull Requests she configures a couple of rules in the `.gerald` file in the monorepo:
 
 ```yaml
 Auto-Label:
@@ -23,40 +23,40 @@ Auto-Label:
   branches:
   - main
   - release*
-
-Notifications:
-# Notify users on new labels: When one of these labels is assigned to an issue
-# or Pull Request, notify the list of users
-- labels: 
-  - mlir
-  - llvm  
-  users: 
-  - Elaine1234 # Elaine's github user account
-  - Gao1234 # Elaine's colleague who also wants the same notifications
-
-Email-Mapping:
-# For sending email notifications, we actually need to know the users email 
-# addresses. Github does not give out this.
-- Elaine1234: elainesemail@provider.xyz
+- path: /llvm/doc/**
+  label: documentation
+  branches:
+  - main
+  - release*  
 ```
 
 Whenever a new PullRequest (PR) is opened Gerald first checks the PR
 against this config file. If an `Auto-Label` rule matches, Gerald assigns this
-label to the PR. In the second phase Gerald checks the `Notifications` rules
-against new labels that were assigned to Issues or PRs. For all matches, Gerald
-adds a comment:
+label to the PR.
+
+In a second step Elaine logs into the Gerald Web UI using her Github account. In
+this UI she configures her notification settings:
+
+| repository | label notifications |
+|------------|---------------------|
+| llvm/llvm-project | llvm, mlir |
+| ... | ...|
+
+Whenever the labels of a PR or an Issue change, Gerald uses these settings and
+adds a comment for all matches:
 
 > *GeraldBot commented on Aug 27th:*
 >
-> notifying @Elaine1234, @Gao1234
+> notifying @Elaine1234, (list of other users)
 
 GitHub then "subscribes" these users to this Issue/Pull Request and sends them
-emails for this and all future changes.
+emails for this and all future changes. They also receive an initial email with
+the description of the PR/Issue.
 
 Gerald also performs these checks on commits. As GitHub does not support
 labeling commits, Gerald does so internally and sends out email notifications on
-such commits. Gerald uses the `Email-Mapping` to get the user's email addresses
-as GitHub does not provide these.
+such commits. For the commit notifications Elaine also needs to configure her
+email address in Gerald.
 
 ## Thoughts on the Design
 
@@ -72,8 +72,14 @@ changes in a repo and then uses the REST API to comment or modify Issues or PRs.
 For sending commit emails, we would sill need an email account that supports
 sending a large quantity of emails.
 
-Keeping user email addresses in a public place is probably not the best solution
-however the git commits already contain these addresses, so the information is
-public already.
+We should not store personal information in the git repository. So we need some
+database for that. For the overall system, we probably need to implement 3 parts
+that communicate via a common database:
 
-However this would mean we need to implement and maintain such a service.
+1. A web UI where users can configure their rules. We can use "Login with
+   GitHub" so we don't have to manage credentials ourselves.
+1. A webhook that accepts change notifications from GitHub and stores them in a
+   queue.
+1. A worker that processes the queue entries and sets the labels, comments on
+   PRS/issues and sends commit notification emails. The worker uses the config
+   information from the `.gerald` file and from the database.
