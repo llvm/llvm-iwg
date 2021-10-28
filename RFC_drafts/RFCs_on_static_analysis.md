@@ -237,3 +237,33 @@ our [Coding Standard](https://llvm.org/docs/CodingStandards.html).
 ### Risks
 
 * same as for C/C++ (see RFC 2 above)
+
+## RFC 6: Set up static analysis for Bash scripts
+
+### tl;dr
+
+I propose to require all modified bash scripts to go through
+[shellcheck](https://github.com/koalaman/shellcheck). 
+
+## Problem description
+
+We have about 100 bash scripts in our monorepo and shellcheck reports ~600 
+findings for these scripts. Most finding are around missing quotes around variables.
+
+### Proposed solution
+
+1. Runn shellfix on all existing files, auto-patch them and start a 
+   code review for all of them. Create a script that does this automatically 
+   and publish it in the monorepo for future similar cleanup jobs.
+1. Set up a job on Buildbot to check for modifications to all .sh files and
+   report any new findings.
+1. Set up `arc lint` to auto-check modified shell scripts and report the 
+  findings if the user has the tool installed.
+  
+### Benefits
+
+* same as for C/C++ (see RFC 2 above)
+
+### Risks
+
+* same as for C/C++ (see RFC 2 above)
