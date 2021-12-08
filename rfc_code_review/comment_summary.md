@@ -46,7 +46,7 @@
 
 ### GitHub Pull Request Recommended Action Items
 
-* Write a guide for how to create "Stacked Reivews".
+* Write a guide for how to create "Stacked Reviews".
 * Decide if we allow Pull Request branches in the main repo.
 * Define a policy for merging pull requests with multiple commits.
 * Determine how can we emulate Herald Rules.
