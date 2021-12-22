@@ -2,7 +2,7 @@
 
 ## GitHub Missing Features
 
-* UI Deficiencies: 
+* UI Deficiencies:
    * On a subjective level, some community members mentioned they are less
       productive reviewing on GitHub. Using the two tabs between reviewing files
       and discussion comments instead of a unified view lead to some people
