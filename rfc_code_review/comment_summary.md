@@ -18,7 +18,7 @@
   * "Stack Reviews" are reviews of multiple dependant patches.  This is something that is easy to do
      with Phabricator, but does not have an equivalent with GitHub.
 * GitHub isn't open-source and does not offer us any way to implement missing features of customize it for the needs of the project.
-## GitHub Positive Featues
+## GitHub Positive Features
 
 * Familiar for new contributors.
   * Phabricator is seen by some as a barrier of entry for new contributors.
