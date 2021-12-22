@@ -16,7 +16,7 @@
      for contributors that subscribe to multiple projects.
 * Good support for "Stack Reviews".
   * "Stack Reviews" are reviews of multiple dependant patches.  This is something that is easy to do
-     with Phabricator, but difficult to do with GitHub.
+     with Phabricator, but does not have an equivalent with GitHub.
 
 ## GitHub Positive Featues
 
