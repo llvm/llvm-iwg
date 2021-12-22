@@ -9,15 +9,15 @@
       reporting that they are using separate browser tabs to review on GitHub.
   * GitHub does not allow to comment on arbitrary line outside of the
       immediate context of the changed lines.
-   * Comments become hidden and discussion marked as "obsolete"
+  * Comments become hidden and discussion marked as "obsolete"
       automatically, even when the comment isn't actually addressed or
       the discussion isn't marked "resolved" by the author. In Phabricator
       hiding is an explicit action from each individual.
       This leads to a recurring complain of an impression of "disappearing
       comments": they disappear from the diff view, but remain in the
       history of the "Conversation" tab, disconnected from the patch.
-   * In case of force-push (either amend or rebase):
-     * the UI does not provide a direct access to view the changes since a
+  * In case of force-push (either amend or rebase):
+    * the UI does not provide a direct access to view the changes since a
         previous state.
      * Comments can't be viewed in their original context, you only see the
         4 lines above the comment.
