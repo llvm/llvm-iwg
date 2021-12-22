@@ -2,12 +2,25 @@
 
 ## GitHub Missing Features
 
-* Intuitive Review Comments:
-  * While this feedback may be somewhat subjective and depend on personal preferences,
-    it was a common issue that was mentioned by many community members.  For example,
-    some comments disappear when a patch is updated, sometimes comments are auto-hidden
-    and can be easy to miss.  And it can be difficult to distinguish between general
-    review comments and comments on specific lines of code
+* UI Deficiencies: 
+   * On a subjective level, many community members mentioned they are less
+      productive reviewing on GitHub. Using the two tabs between reviewing files
+      and discussion comments instead of a unified view lead to some people
+      reporting that they are using separate browser tabs to review on GitHub.
+   * GitHub does not allow to comment on arbitrary line outside of the
+      immediate context of the changed lines.
+   * Comments become hidden and discussion marked as "obsolete"
+      automatically, even when the comment isn't actually addressed or
+      the discussion isn't marked "resolved" by the author. In Phabricator
+      hiding is an explicit action from each individual.
+      This leads to a recurring complain of an impression of "disappearing
+      comments": they disappear from the diff view, but remain in the
+      history of the "Conversation" tab, disconnected from the patch.
+   * In case of force-push (either amend or rebase):
+     * the UI does not provide a direct access to view the changes since a
+        previous state.
+     * Comments can't be viewed in their original context, you only see the
+        4 lines above the comment.
 * Automatic Subscription Rules (Herald Rules)
   * There is no builtin way for people to automatically subscribe to a pull request covering
     a specific part of the codebase.  This is seen as a major downside of GitHub pull requests.
