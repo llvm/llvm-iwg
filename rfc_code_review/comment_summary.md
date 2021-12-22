@@ -53,7 +53,7 @@
 ### Workflow Improvement Opportunities with GitHub
 
 * Can enforce developer policy / restrict pushes.
-   * With GitHub pull requests we can enforce parts of the developer policy with automated checks.
+  * With GitHub pull requests we can enforce parts of the developer policy with automated checks.
 * One point that was made in the comments is that it is hard to have reliable pre-commit
   testing with Phabricator, because Phabricator deals only with patches, so if the patch
   doesn't apply on the current main branch or some other known commit then you can't run
