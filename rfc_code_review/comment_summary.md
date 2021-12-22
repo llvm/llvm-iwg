@@ -38,10 +38,6 @@
   * Phabricator is no longer maintained upstream.
 * Easier to integrate with CI and other kinds of automation.
   * GitHub actions makes it very easy to automate parts of our review process.
-  * One point that was made in the comments is that it is hard to have reliable pre-commit testing with Phabricator,
-    because Phabricator deals only with patches, so if the patch doesn't apply on the current main branch or some
-    other known commit then you can't run CI on the patch.  With GitHub pull requests everything is a branch, so
-    you can always run CI against them even if the patch is a little bit out-of-date with main.
 * Merge from UI
   * You can merge pull requests directly from the web UI, which avoid leaving the review tool
      to push to main, avoid having to manipulate command line tools (`arc` or `patch`, `git`).
