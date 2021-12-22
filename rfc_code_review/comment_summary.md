@@ -24,9 +24,6 @@
 * Automatic Subscription Rules (Herald Rules)
   * There is no builtin way for people to automatically subscribe to a pull request covering
     a specific part of the codebase.  This is seen as a major downside of GitHub pull requests.
-* Configurable Notifications.
-  * Configuration for notifications is not very flexible and it can be difficult to manage especially
-     for contributors that subscribe to multiple projects.
 * Good support for "Stack Reviews".
   * "Stack Reviews" are reviews of multiple dependant patches.  This is something that is easy to do
      with Phabricator, but does not have an equivalent with GitHub.
