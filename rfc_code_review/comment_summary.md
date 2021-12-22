@@ -4,29 +4,29 @@
 
 * UI Deficiencies:
   * On a subjective level, some community members mentioned they are less
-      productive reviewing on GitHub. Using the two tabs between reviewing files
-      and discussion comments instead of a unified view lead to some people
-      reporting that they are using separate browser tabs to review on GitHub.
+    productive reviewing on GitHub. Using the two tabs between reviewing files
+    and discussion comments instead of a unified view lead to some people
+    reporting that they are using separate browser tabs to review on GitHub.
   * GitHub does not allow to comment on arbitrary line outside of the
-      immediate context of the changed lines.
+    immediate context of the changed lines.
   * Comments become hidden and discussion marked as "obsolete"
-      automatically, even when the comment isn't actually addressed or
-      the discussion isn't marked "resolved" by the author. In Phabricator
-      hiding is an explicit action from each individual.
-      This leads to a recurring complain of an impression of "disappearing
-      comments": they disappear from the diff view, but remain in the
-      history of the "Conversation" tab, disconnected from the patch.
+    automatically, even when the comment isn't actually addressed or
+    the discussion isn't marked "resolved" by the author. In Phabricator
+    hiding is an explicit action from each individual.
+    This leads to a recurring complain of an impression of "disappearing
+    comments": they disappear from the diff view, but remain in the
+    history of the "Conversation" tab, disconnected from the patch.
   * In case of force-push (either amend or rebase):
     * the UI does not provide a direct access to view the changes since a
-        previous state.
+      previous state.
     * Comments can't be viewed in their original context, you only see the
-        4 lines above the comment.
+      4 lines above the comment.
 * Automatic Subscription Rules (Herald Rules)
   * There is no builtin way for people to automatically subscribe to a pull request covering
     a specific part of the codebase.  This is seen as a major downside of GitHub pull requests.
 * Good support for "Stack Reviews".
   * "Stack Reviews" are reviews of multiple dependant patches.  This is something that is easy to do
-     with Phabricator, but does not have an equivalent with GitHub.
+    with Phabricator, but does not have an equivalent with GitHub.
 * GitHub isn't open-source and does not offer us any way to implement missing features of customize it for the needs of the project.
 * E-mails don't include patch content.
 
@@ -40,8 +40,8 @@
   * GitHub actions makes it very easy to automate parts of our review process.
 * Merge from UI
   * You can merge pull requests directly from the web UI, which avoid leaving the review tool
-     to push to main, avoid having to manipulate command line tools (`arc` or `patch`, `git`).
-     Phabricator does not have an equivalent.
+    to push to main, avoid having to manipulate command line tools (`arc` or `patch`, `git`).
+    Phabricator does not have an equivalent.
 * IDE Integration
   * Some IDEs have GitHub PR integration which can simplify the process of creating a pull request.
 * Rich diffs of .rst files.
