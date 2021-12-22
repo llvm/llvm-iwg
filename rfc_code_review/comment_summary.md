@@ -56,6 +56,16 @@
   * There are alternative interfaces that layer on top of GitHub Pull Requests that provide additional
     functionality.
 
+### Workflow Improvement Opportunities with GitHub
+
+* Can enforce developer policy / restrict pushes.
+   * With GitHub pull requests we can enforce parts of the developer policy with automated checks.
+* One point that was made in the comments is that it is hard to have reliable pre-commit
+  testing with Phabricator, because Phabricator deals only with patches, so if the patch
+  doesn't apply on the current main branch or some other known commit then you can't run
+  CI on the patch.  With GitHub pull requests everything is a branch, so you can always run
+  CI against them even if the patch is a little bit out-of-date with main.
+
 ### GitHub Pull Request Recommended Action Items
 
 * Write a guide for how to create "Stacked Reviews".
