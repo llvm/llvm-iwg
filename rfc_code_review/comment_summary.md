@@ -19,7 +19,7 @@
   * In case of force-push (either amend or rebase):
     * the UI does not provide a direct access to view the changes since a
         previous state.
-     * Comments can't be viewed in their original context, you only see the
+    * Comments can't be viewed in their original context, you only see the
         4 lines above the comment.
 * Automatic Subscription Rules (Herald Rules)
   * There is no builtin way for people to automatically subscribe to a pull request covering
