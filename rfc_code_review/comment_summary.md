@@ -46,9 +46,9 @@
     other known commit then you can't run CI on the patch.  With GitHub pull requests everything is a branch, so
     you can always run CI against them even if the patch is a little bit out-of-date with main.
 * Merge from UI
-  * You can merge pull requests directly from the web UI, which is much more simple than the Phabricator
-    process of manually (or with arc) downloading the patch, applying it and pushing.  This is both a time
-    saver and more intuitive for new contributors.
+  * You can merge pull requests directly from the web UI, which avoid leaving the review tool
+     to push to main, avoid having to manipulate command line tools (`arc` or `patch`, `git`).
+     Phabricator does not have an equivalent.
 * IDE Integration
   * Some IDEs have GitHub PR integration which can simplify the process of creating a pull request.
 * Rich diffs of .rst files.
