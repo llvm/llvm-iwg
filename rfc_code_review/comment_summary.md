@@ -34,8 +34,6 @@
 
 * Familiar for new contributors.
   * Phabricator is seen by some as a barrier of entry for new contributors.
-* Can enforce developer policy / restrict pushes.
-  * With GitHub pull requests we can enforce parts of the developer policy with automated checks.
 * Third-party hosting and support
   * Phabricator is no longer maintained upstream.
 * Easier to integrate with CI and other kinds of automation.
