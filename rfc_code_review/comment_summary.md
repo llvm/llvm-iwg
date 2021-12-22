@@ -7,7 +7,7 @@
       productive reviewing on GitHub. Using the two tabs between reviewing files
       and discussion comments instead of a unified view lead to some people
       reporting that they are using separate browser tabs to review on GitHub.
-   * GitHub does not allow to comment on arbitrary line outside of the
+  * GitHub does not allow to comment on arbitrary line outside of the
       immediate context of the changed lines.
    * Comments become hidden and discussion marked as "obsolete"
       automatically, even when the comment isn't actually addressed or
