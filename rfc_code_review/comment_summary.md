@@ -28,7 +28,7 @@
   * "Stack Reviews" are reviews of multiple dependant patches.  This is something that is easy to do
      with Phabricator, but does not have an equivalent with GitHub.
 * GitHub isn't open-source and does not offer us any way to implement missing features of customize it for the needs of the project.
-* E-mails don't include patch content; 
+* E-mails don't include patch content.
 
 ## GitHub Positive Features
 
