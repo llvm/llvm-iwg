@@ -17,7 +17,7 @@ jobs:
 
     # installing more packages as proposed in 
     # https://askubuntu.com/questions/1088662/npm-depends-node-gyp-0-10-9-but-it-is-not-going-to-be-installed
-    - name: install markdownlint-cli@0.31.1
+    - name: install markdownlint-cli@0.32.1
 
       run: |
         sudo apt-get update       
