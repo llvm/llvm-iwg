@@ -70,8 +70,9 @@
 * Investigate alternative interfaces (https://pullrequest.com, reviewable.io)
 
 Issues tracking these items:
-    * https://github.com/llvm/llvm-project/issues/56643
-    * https://github.com/llvm/llvm-project/issues/56639
-    * https://github.com/llvm/llvm-project/issues/56641
-    * https://github.com/llvm/llvm-project/issues/56673
-    * https://github.com/llvm/llvm-project/issues/56674
+
+* https://github.com/llvm/llvm-project/issues/56643
+* https://github.com/llvm/llvm-project/issues/56639
+* https://github.com/llvm/llvm-project/issues/56641
+* https://github.com/llvm/llvm-project/issues/56673
+* https://github.com/llvm/llvm-project/issues/56674
