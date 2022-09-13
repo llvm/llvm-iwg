@@ -1,0 +1,12 @@
+---
+- hosts: all
+  gather_facts: yes
+
+  tasks:
+    - include_tasks: "../tasks/add_users.yaml"
+      with_items:
+        - { username: medwards, uid: 510}
+        - { username: akor, uid: 511 }
+        - { username: tstellar, uid: 512 }
+      loop_control:
+        loop_var: user_dict

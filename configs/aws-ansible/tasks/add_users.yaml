@@ -1,0 +1,34 @@
+---
+- name: Install latest passlib with pip
+  pip: name=passlib
+
+- name: "Add the user '{{ user_dict.username }}' with a specific uid and a primary group of 'wheel'"
+  become: yes
+  user:
+    name: "{{ user_dict.username }}"
+    comment: "{{ user_dict.username }} (LLVM Foundation)"
+    group: wheel
+    groups: "adm,wheel,systemd-journal"
+    shell: /bin/bash
+    state: present
+    remove: no
+    password: "{{ vault_default_user_password | password_hash('sha512') }}"
+    update_password: on_create
+
+- name: "Create /home/{{ user_dict.username }}/.ssh dir"
+  become: yes
+  ansible.builtin.file:
+    path: "/home/{{ user_dict.username }}/.ssh"
+    state: directory
+    owner: "{{ user_dict.username }}"
+    group: wheel
+    mode: '0700'
+
+- name: "Setup {{ user_dict.username }} public key"
+  become: yes
+  ansible.builtin.copy:
+    src: "../files/{{ user_dict.username }}_llvm.key.pub"
+    dest: "/home/{{ user_dict.username }}/.ssh/authorized_keys"
+    owner: "{{ user_dict.username }}"
+    group: wheel
+    mode: '0644'
